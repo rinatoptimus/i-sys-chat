@@ -34,6 +34,11 @@
         for(var x = 0;x < data.length;x++){
           var message = document.createElement('div');
           message.setAttribute('class', 'chat-message');
+
+          if(x % 2 == 0) {
+            message.setAttribute('class', 'bg-odd');
+          }
+
           message.textContent = data[x].name+": "+data[x].message;
           messages.appendChild(message);
           messages.insertBefore(message, messages.firstChild);
