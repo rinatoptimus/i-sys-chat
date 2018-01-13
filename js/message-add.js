@@ -28,7 +28,7 @@
 
   // проверка соединения
   if(socket !== undefined){
-    console.log('Соединение...');
+    console.log('Соединение установлено');
 
     socket.on('output', function(data){
       if(data.length){
