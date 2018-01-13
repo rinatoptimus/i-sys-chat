@@ -7,7 +7,6 @@
   var messages = element('messages');
   var textarea = element('textarea');
   var username = element('username');
-  var clearBtn = element('clear');
 
   // статус по умолчанию
   var statusDefault = status.textContent;
