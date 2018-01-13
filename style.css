@@ -7,6 +7,14 @@
   margin-bottom: 0;
 }
 
+.chat-message {
+	padding: 5px;
+}
 .bg-odd {
 	background-color: #f8f9fa;
+}
+.input-chars-left {
+  padding: .5rem .75rem;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: .25rem;
 }

@@ -35,7 +35,7 @@ MONGO.connect('mongodb://127.0.0.1/mongochat', function(err, db){
 
       // проверяем "имя" и "сообщение"
       if(name == '' || message == ''){
-        sendStatus('Введите имя и сообщение!');
+        sendStatus('Введите имя и сообщение');
       } else {
         // вводим сообщение
         chat.insert({name: name, message: message}, function(){
