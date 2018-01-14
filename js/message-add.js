@@ -35,13 +35,14 @@
           var message = document.createElement('div');
           message.setAttribute('class', 'chat-message');
 
+          message.textContent = data[x].name + ": " + data[x].message;
+          messages.appendChild(message);
+          // messages.insertBefore(message, messages.firstChild);
+          messages.insertBefore(message, messages.lastChild);
+
           if(x % 2 == 0) {
             message.classList.add('bg-odd');
           }
-
-          message.textContent = data[x].name + ": " + data[x].message;
-          messages.appendChild(message);
-          messages.insertBefore(message, messages.firstChild);
         }
       }
     });
