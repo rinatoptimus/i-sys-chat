@@ -37,7 +37,6 @@
 
           message.textContent = data[x].name + ": " + data[x].message;
           messages.appendChild(message);
-          // messages.insertBefore(message, messages.firstChild);
           messages.insertBefore(message, messages.lastChild);
 
           if(x % 2 == 0) {
@@ -67,8 +66,8 @@
       }
     });
 
-    var sumbmit = document.getElementById('sumbmit');
-    sumbmit.addEventListener('click', function(event){
+    var submit = document.getElementById('submit');
+    submit.addEventListener('click', function(event){
       socket.emit('input', {
         name: username.value,
         message: textarea.value
@@ -84,7 +83,7 @@
         var monthIndex = date.getMonth();
         var year = date.getFullYear();
 
-        var timestamp =  currentdate.getHours() + ':' + currentdate.getMinutes() + ' ' + day + '.' + monthNames[monthIndex] + '.' + year;
+        var timestamp = currentdate.getHours() + ':' + currentdate.getMinutes() + ' ' + day + '.' + monthNames[monthIndex] + '.' + year;        
         return timestamp;
       }
 

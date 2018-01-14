@@ -9,15 +9,15 @@ function limitText(limitField, limitCount, limitNum) {
   }
 }
 
-var sumbmit = document.getElementById('sumbmit');
+var submit = document.getElementById('submit');
 var textarea = document.getElementById('textarea');
 function disable() {
 	var textarea_value = textarea.value.length;
   if(textarea_value > 0) {
-  	sumbmit.disabled = false;
+  	submit.disabled = false;
   } 
   if(textarea_value <= 0) {
-  	sumbmit.disabled = true;
+  	submit.disabled = true;
   }
 }
 textarea.addEventListener('keyup', disable);
