@@ -7,7 +7,7 @@
   var messages = element('messages');
   var textarea = element('textarea');
   var username = element('username');
-
+  var countdown = element('countdown');
   // статус по умолчанию
   var statusDefault = status.textContent;
 
@@ -74,6 +74,7 @@
         name: username.value,
         message: textarea.value
       });
+      countdown.value = '140';
       event.preventDefault();
     });
 
