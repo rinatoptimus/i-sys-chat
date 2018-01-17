@@ -84,15 +84,17 @@
     });
 
     textarea.addEventListener('keypress', function() {
-      socket.emit('typing', username.value);
+      socket.emit('typing', {
+        name: username.value
+      });
     });
 
-    socket.on('typing', function(data) {
+    socket.on('typing', function(name) {
       userAction.innerHTML = 
         '<p>Пользователь' 
         + ' '
         + '<b>'
-        + data
+        + name
         + '</b>'
         + ' печатает сообщение...</p>';
     });
