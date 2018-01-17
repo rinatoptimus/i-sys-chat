@@ -49,7 +49,8 @@ MONGO.connect('mongodb://127.0.0.1/mongochat', function(err, db){
     });
 
     socket.on('typing', function(data) {
-      socket.broadcast.emit('typing', name);
+      socket.broadcast.emit('typing', data.name);
     });
+
   });
 });
