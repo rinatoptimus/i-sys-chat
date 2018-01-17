@@ -74,7 +74,12 @@
         name: username.value,
         message: textarea.value
       });
-      countdown.value = '140';
+      var maxCharNumber = '140';
+      if(countdown.value != maxCharNumber) {
+        return;
+      } else {
+        countdown.value = maxCharNumber;
+      }
       event.preventDefault();
     });
 
